@@ -1,0 +1,21 @@
+include time
+
+// Define a Class
+class Cal:
+    func _construct_(this, interest):
+        this.interest := interest
+
+    // Define a function
+    func cal_final(this, amount, year):
+        i := 0
+        final := amount
+        while i < year:
+            final := final * (this.interest + 1)
+            i += 1
+
+        print(int(final))
+
+
+func main():
+    Cal := Cal(0.04)
+    Cal.cal_final(10000, 3)

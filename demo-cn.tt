@@ -1,0 +1,22 @@
+包含 time
+
+// 定义一个类
+定义类 Cal:
+    // 构造函数
+    定义方法 构造函数(类成员, interest):
+        类成员.interest := interest
+
+    // 方法: 计算本息
+    定义方法 cal_final(类成员, amount, year):
+        i := 0
+        final := amount
+        当 i < year:
+            final := final * (类成员.interest + 1)
+            i += 1
+
+        打印(整型(final))
+
+
+主函数():
+    Cal := Cal(0.04)
+    Cal.cal_final(10000, 4)
