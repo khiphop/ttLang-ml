@@ -21,7 +21,7 @@ def create_tt(content):
 
         content = content.replace(py, tt)
 
-    with open('mai.tt', 'w') as fw:
+    with open('main.tt', 'w') as fw:
         fw.seek(0)
         fw.write(content)
 
